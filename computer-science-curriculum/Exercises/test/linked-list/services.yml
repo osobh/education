@@ -1,0 +1,24 @@
+services:
+  master:
+    image: mesosphere/mesos-master:1.0.0-rc2
+    network_mode: host
+    environment:
+      MESOS_ZK: zk://ec2-52-33-252-91.us-west-2.compute.amazonaws.com:2181/mesos
+      MESOS_QUORUM: 1
+      MESOS_CLUSTER: knownbs
+      MESOS_REGISTRY: replicated_log
+
+  marathon:
+    image: mesosphere/marathon:latest
+    network_mode: host
+    environment:
+      MARATHON_MASTER: zk://ec2-52-33-252-91.us-west-2.compute.amazonaws.com:2181/mesos
+    depends_on:
+      - master
+
+  chronos:
+    image: mesosphere/chronos:chronos-2.5.0-0.1.20160223054243.ubuntu1404-mesos-0.27.1-2.0.226.ubuntu1404
+    command: /usr/bin/chronos run_jar --http_port 4400 --master zk://ec2-52-33-252-91.us-west-2.compute.amazonaws.com:2181/mesos --zk_hosts zk://ec2-52-33-252-91.us-west-2.$
+    network_mode: host
+    depends_on:
+      - marathon
