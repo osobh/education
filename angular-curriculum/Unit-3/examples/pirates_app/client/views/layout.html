@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="piratesApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Pirates App!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <base href="/">
+</head>
+<body>
+  <nav>
+    <a href="/pirates">Pirates App!</a>
+    <a href="/pirates/new" class="btn btn-primary pull-right" id="add-pirate">Add a Pirate!</a>
+  </nav>
+  <div ng-view class="container"></div>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.js"></script>
+  <script src="/javascripts/app.js"></script>
+  <script src="/javascripts/controllers.js"></script>
+  <script src="/javascripts/services.js"></script>
+  <script src="/javascripts/components.js"></script>
+</body>
+</html>

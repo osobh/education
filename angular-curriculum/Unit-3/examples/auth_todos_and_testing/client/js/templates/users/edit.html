@@ -1,0 +1,13 @@
+<div ng-if="errors">
+  {{errors}}
+</div>
+<a href="/users">Go home</a>
+
+<a ng-href="/users/{{user.id}}">Show</a>
+
+<form action="javascript:void(0)" ng-submit="editUser(user)">
+  <input type="text" name="username" ng-model="user.username" value="dope">
+  <input type="submit" value="Edit">
+</form>
+
+<input ng-click ="removeUser(user)" type="submit" value="Remove">

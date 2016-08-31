@@ -1,0 +1,9 @@
+<h1>Edit a new todo!</h1>
+
+<form action="javascript:void(0)" ng-submit="editTodo(todo)">
+  <label for="task">Task</label>
+  <input type="text" ng-model="todo.task" id="task">
+  <input type="submit" value="Edit todo">
+</form>
+
+<button ng-click="deleteTodo(todo)">DELETE THIS TODO</button>

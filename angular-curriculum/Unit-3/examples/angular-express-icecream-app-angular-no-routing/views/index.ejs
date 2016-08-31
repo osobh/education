@@ -1,0 +1,52 @@
+<% include ../partials/header %>
+  <div class="panel panel-default" ng-show="view.newFormVisible">
+    <div class="panel-heading">Add a New Flavor!!!</div>
+    <div class="panel-body">
+      <form ng-submit="add(newIcecream)">
+        <div class="form-group">
+          <label for="flavor">Flavor</label>
+          <input type="text" id="flavor" name="flavor" placeholder="What's the new flavor?" class="form-control" ng-model="newIcecream.flavor">
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" id="description" name="description" placeholder="Describe the flavor!" class="form-control" ng-model="newIcecream.description">
+        </div>
+        <div class="form-group">
+          <label for="imageUrl">Image URL</label>
+          <input type="text" id="imageUrl" name="imageUrl" placeholder="What does the new flavor look like?" class="form-control" ng-model="newIcecream.imageUrl">
+        </div>
+        <button class="btn btn-primary pull-right" role="submit">Add Flavor!</button>
+      </form>
+    </div>
+  </div>
+  <div class="panel panel-primary panel-narrow" ng-repeat="icecream in icecreams" ng-controller="IcecreamEditController">
+    <div class="panel-heading text-right">
+      <h3 class="panel-title pull-left">{{ icecream.flavor }}</h3>
+      <button ng-click="toggleEditing()" class="btn btn-success">
+        <span class="glyphicon glyphicon-pencil"></span>
+      </button>
+      <button role="submit" class="btn btn-danger" ng-click="delete(icecream._id)">
+        <span class="glyphicon glyphicon-remove"></span>
+      </button>
+    </div>
+    <div class="panel-body">
+      <img ng-src="{{ icecream.imageUrl }}" alt="{{ icecream.description }}">
+    </div>
+    <div class="panel-body">{{ icecream.description }}</div>
+    <form ng-submit="edit(icecream)" ng-show="view.editing">
+      <div class="form-group">
+        <label for="flavor">Flavor</label>
+        <input type="text" id="flavor" name="flavor" placeholder="What's the new flavor?" class="form-control" ng-model="icecream.flavor">
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" id="description" name="description" placeholder="Describe the flavor!" class="form-control" ng-model="icecream.description">
+      </div>
+      <div class="form-group">
+        <label for="imageUrl">Image URL</label>
+        <input type="text" id="imageUrl" name="imageUrl" placeholder="What does the new flavor look like?" class="form-control" ng-model="icecream.imageUrl">
+      </div>
+      <button class="btn btn-primary btn-block" role="submit">Edit Flavor!</button>
+    </form>
+  </div>
+<% include ../partials/footer %> 

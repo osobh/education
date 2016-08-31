@@ -1,0 +1,21 @@
+<form ng-submit="createTodo()">
+  <div class="form-group">
+    <input type="text" placeholder="title" id="todo_title" ng-model="todo.title">
+    <input type="text" placeholder="details" id="todo_text" ng-model="todo.text">
+    <button>Create Todo</button>
+  </div>
+</form>
+
+<ul class="todo-list">
+<li ng-repeat="todo in todos">
+  <div class="checkbox">
+    <label>
+      <input id="done-checkbox" type="checkbox" ng-model="todo.done" ng-click="updateTodo(todo)">
+      <span class="todo-text" ng-class="{done: todo.done}"><strong>{{todo.title}}</strong> - {{todo.text}}</span>
+      <button class="btn btn-default" ng-click="deleteTodo(todo)">
+        <span class="remove-button glyphicon glyphicon-remove" aria-hidden="true"></span>
+      </button>
+    </label>
+  </div>
+</li>
+</ul>

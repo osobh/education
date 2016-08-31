@@ -1,0 +1,22 @@
+<% include ../partials/header %>
+  <% icecreams.forEach(function(icecream) { %>
+    <div class="panel panel-primary panel-narrow">
+      <div class="panel-heading text-right">
+        <h3 class="panel-title pull-left"><%= icecream.flavor %></h3>
+        <a href="/icecreams/<%= icecream.id %>/edit" class="btn btn-success">
+          <span class="glyphicon glyphicon-pencil"></span>
+        </a>
+        <form action="/icecreams/<%= icecream.id %>?_method=delete" method="POST" class="delete-form">
+          <button role="submit" class="btn btn-danger">
+            <span class="glyphicon glyphicon-remove"></span>
+          </button>
+        </form>
+      </div>
+      <div class="panel-body">
+        <a href="/icecreams/<%= icecream.id %>">
+          <img src="<%= icecream.imageUrl %>" alt="<%= icecream.description %>">
+        </a>
+      </div>
+    </div>
+  <% }) %>
+<% include ../partials/footer %>

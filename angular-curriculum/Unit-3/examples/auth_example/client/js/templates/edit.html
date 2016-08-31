@@ -1,0 +1,14 @@
+<custom-nav></custom-nav>
+<div ng-if="editCtrl.errors">
+  {{editCtrl.errors}}
+</div>
+<a href="/users">Go home</a>
+
+<a ng-href="/users/{{editCtrl.user.id}}">Show</a>
+
+<form action="javascript:void(0)" ng-submit="editCtrl.editUser(editCtrl.user)">
+  <input type="text" name="username" ng-model="editCtrl.user.username">
+  <input type="submit" value="Edit">
+</form>
+
+<input ng-click ="editCtrl.removeUser(editCtrl.user)" type="submit" value="Remove">

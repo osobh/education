@@ -1,0 +1,93 @@
+/* These styles are NOT produced by angular, we gave our
+   DOM elements these classes direcetly to establish rules 
+   for animating them */
+
+/* Fast faders transition quickly */
+.fast-fade {
+  transition: 0.5s linear all;
+}
+
+/* slow faders transition slowly */
+.slow-fade {
+  transition: 5s linear all;
+}
+
+/* Example of a gotcha - because we used an id, which is more specific
+   elements with id=slow-fade will ALWAYS be opacity .5, but when the
+   ng-hide animation finally completes, display:none will remove it 
+   from the page.
+*/
+#slow-fade {
+  transition: 5s linear all;
+  opacity: .5;
+}
+
+/* For the big-small, we don't NEED the transition classes
+   In this case, we just switch between big and small state, 
+   and since they have animations attached they'll work just
+   great.
+
+   Unlike the other two, these will only animate on
+   font-size, so the background highlighting will be 
+   instant on/off, but the font will change smoothly
+*/
+.big {
+	transition: 3s linear font-size;
+	font-size: 50px;
+}
+
+.small {
+	transition: 3s linear font-size;
+	font-size: 40px;
+}
+
+/* But, to show the value of ng-animate lets still use the
+   ng-animate classes to highlight when an element is 
+   transitioning
+*/
+.big-add, .small-add {
+	background: yellow
+}
+
+/* ng-if uses ng-enter ng-enter-active 
+   as well as ng-leave ng-leave-active */
+.ng-enter {
+  position:relative;
+  left:-100px;
+}
+
+.ng-enter.ng-enter-active {
+  left:0px;
+}
+
+.ng-leave {
+  position:relative;	
+  left:0px;
+}
+
+.ng-leave.ng-leave-active {
+  left:-100px;
+}
+
+/* ng-hide uses ng-hide-remove ng-hide-remove-active
+   as well as   ng-hide-add    ng-hide-add-avtive */
+
+/* Set initial opacity for when ng-hide is removed -- becomming visable */
+.ng-hide-remove {
+  opacity: 0;
+}
+
+/* Set the style to animate towards when ng-hide is being removed -- becoming visable */
+.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+}
+
+/* Set the initial opacity for when ng-hide is being added -- becoming hidden */
+.ng-hide-add {
+  opacity: 1;
+}
+
+/* Set the value to animate towards when ng-hide is being added -- becoming hiddel */
+.ng-hide-add.ng-hide-add-active {
+  opacity: 0;
+}

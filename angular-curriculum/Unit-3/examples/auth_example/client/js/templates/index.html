@@ -1,0 +1,10 @@
+<custom-nav></custom-nav>
+<h1>Home!</h1>
+<h2>Current User is {{usersCtrl.currentUser}}</h2>
+<div ng-repeat="user in usersCtrl.users.data">
+  <a href="/users/{{user.id}}">Try to see {{user.username}}'s information!</a>
+</div>
+
+<a ng-href="/users/{{usersCtrl.currentUser.id}}">Show</a>
+<a ng-href="/users/{{usersCtrl.currentUser.id}}/edit">Edit</a>
+<a href="/#/logout">Logout</a>

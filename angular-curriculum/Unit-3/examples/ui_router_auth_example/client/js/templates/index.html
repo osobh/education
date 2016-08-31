@@ -1,0 +1,11 @@
+<h1>Home!</h1>
+<h2>Current User is {{currentUser}}</h2>
+<div ng-repeat="user in users.data">
+  <a ui-sref="user({id:user._id})">Try me!</a>
+</div>
+
+<a ui-sref="user({id:currentUser.id})">Show Current User(Sorry!)</a>
+
+<a ui-sref="edit_user({id:currentUser.id})">Edit Current User</a>
+
+<a ui-sref="logout">Logout</a>

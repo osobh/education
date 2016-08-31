@@ -1,0 +1,23 @@
+{
+  "name": "auth_example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^0.8.5",
+    "body-parser": "^1.14.1",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "jsonwebtoken": "^5.4.1",
+    "knex": "^0.11.5",
+    "locus": "^1.2.0",
+    "method-override": "^2.3.5",
+    "morgan": "^1.6.1",
+    "pg": "^4.5.6"
+  }
+}

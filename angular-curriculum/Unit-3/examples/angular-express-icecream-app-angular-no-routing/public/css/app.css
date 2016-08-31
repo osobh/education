@@ -1,0 +1,41 @@
+.panel-narrow {
+  width: 30%;
+  float: left;
+  margin-right: 3%;
+}
+
+.panel img {
+  width: 100%;
+}
+
+.panel-heading .btn, 
+.panel-heading form, 
+.panel-body .btn,
+.panel-body .delete-form {
+  display: inline-block;
+}
+
+.panel-heading .btn {
+  padding: 0 5px;
+  margin-right: 5px;
+}
+
+.btn-primary {
+  margin-right: 10px;
+}
+
+@media (max-width: 500px) {
+  .panel-narrow {
+    width: 100%;
+    clear: both;
+  }
+}
+
+.panel form {
+  margin: 20px;
+}
+
+nav li {
+  line-height: 64px;
+  margin-right: 10px;
+}

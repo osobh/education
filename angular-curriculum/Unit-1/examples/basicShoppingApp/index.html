@@ -1,0 +1,35 @@
+<html >
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+
+  <body ng-app="app" ng-controller="ShoppingController" style="text-align: center;">
+    <h2>Welcome to the shopping experience</h2>
+    <h3>I do hope you'll buy something</h3>
+
+    <!-- All Items -->
+    <div>
+    	<h3> Stuff you can buy! </h3>
+    	<ul>
+    		<li ng-repeat="item in availableItems">
+    		  {{item.name}}, {{item.price / 100 | currency}}
+    			<button ng-click="addItem(item)">Add To Cart</button>
+    		</li>
+    	</ul>
+    </div>
+
+    <!-- CART -->
+    <div>
+    	<h3> Stuff you're about to buy! </h3>
+    	<ul>
+    		<li ng-repeat="item in currentItems track by $index">
+    		  {{item.name}}, {{item.price / 100 | currency}}
+    		</li>
+    	</ul>
+    	<h5> But it's gonna cost you! </h5>
+    	<span>{{totalCost / 100 | currency}}</span>
+    </div>
+  </body>
+</html>

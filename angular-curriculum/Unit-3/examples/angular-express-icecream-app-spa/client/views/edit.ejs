@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+  <% if (error) { %>
+    <div class="alert alert-warning alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <%= error %>
+    </div>
+  <% } %>
+  <div class="panel panel-default">
+    <div class="panel-heading">Edit This Flavor!!!</div>
+    <div class="panel-body">
+      <form action="/icecreams/<%= icecream.id %>?_method=put" method="POST">
+        <div class="form-group">
+          <label for="flavor">Flavor</label>
+          <input type="text" id="flavor" name="icecream[flavor]" placeholder="What's the new flavor?" class="form-control" value="<%= icecream.flavor %>">
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" id="description" name="icecream[description]" placeholder="Describe the flavor!" class="form-control" value="<%= icecream.description %>">
+        </div>
+        <div class="form-group">
+          <label for="imageUrl">Image URL</label>
+          <input type="text" id="imageUrl" name="icecream[imageUrl]" placeholder="What does the new flavor look like?" class="form-control" value="<%= icecream.imageUrl %>">
+        </div>
+        <a href="/icecreams" class="btn btn-warning pull-right">Never Mind, Go Back</a>
+        <button class="btn btn-primary pull-right" role="submit">Edit Flavor!</button>
+      </form>
+    </div>
+  </div>
+<% include ../partials/footer %>

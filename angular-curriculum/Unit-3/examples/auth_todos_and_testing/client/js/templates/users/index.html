@@ -1,0 +1,9 @@
+<h1>Home!</h1>
+<h2>Hello, {{currentUser.username}}</h2>
+<div ng-repeat="user in users.data">
+  <a href="/users/{{user._id}}">Try to see {{user.username}}'s information!</a>
+</div>
+
+<a ng-href="/users/{{currentUser.id}}">Show</a>
+<a ng-href="/users/{{currentUser.id}}/edit">Edit</a>
+<a ng-href="/logout">Logout</a>

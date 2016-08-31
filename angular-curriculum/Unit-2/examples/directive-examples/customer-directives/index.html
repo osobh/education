@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Directives Example</title>
+  
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+  <script src="app.js"></script>
+  <script src="directive-js/customerSimple.js"></script>
+  <script src="directive-js/templateDirective.js"></script>
+  <script src="directive-js/isolateScopeDirective.js"></script>
+  
+</head>
+<body ng-app="SimpleDirectiveApp">
+  <div ng-controller="MainController">
+  <h1>Simple Directive</h1>
+  <simple-customer ng-repeat="customer in customers"></simple-customer>
+
+  <h1>Template Directive</h1>
+  <template-customer ng-repeat="customer in customers"></template-customer>
+
+  <h1>Isolate Scope Directive</h1>
+  <isolate-scope-customer ng-repeat="customer in customers" customer-values="customer"></isolate-scope-directive>
+</div>
+</body>
+</html>

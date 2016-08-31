@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="spotifyApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Spotify Angular</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+    <script src="javascript/app.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+  </head>
+
+  <body ng-controller="MainController">
+  	<h1> Music Is Fun </h1>
+      <div>
+        <h2>Spotify Artist Search</h2>
+        <div>
+          <label for="spotify-q"></label>
+          <input type="text" ng-model="searchQuery">
+          <button ng-click="performSearch(searchQuery)">Search!</button>
+          <h3>Spotify Search Results:</h3>
+          <div class="results"></div>
+        </div>
+        <hr>
+      </div>
+
+      <div ng-repeat="artist in artists">
+        <a ng-click="fetchArtist(artist)">{{artist.name}}</a>
+      </div>
+
+      <div>
+        <h1>{{activeArtist}}</h1>
+        
+        <!-- each album -->
+        <ul>
+          <li ng-repeat="album in currentArtistInfo">
+            <h3>{{album.name}}, {{album.releaseDate}}</h3>
+            <div class="flex-box">
+              <img ng-src="{{album.albumArt.url}}">
+              
+              <!-- each track -->
+              <ol class="track-list">
+                <li ng-repeat="track in album.tracks track by $index">
+                  {{track}}
+                </li>
+              </ol>
+            </div>
+          </li>
+        </ul>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="animateApp" ng-cloak>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate..js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-controller="MainController">
+  <h2><a href="https://slides.com/tylerbettilyon/ng-animate/">
+    View this slideshow for context on this example!
+  </a></h2>
+
+  <!-- ng-if divs -->
+  <div class="slow-fade" ng-init="hidden = false" ng-click="hidden = true" ng-if="!hidden">ng-if slow</div>
+  <div class="fast-fade" ng-init="hidden = false" ng-click="hidden = true" ng-if="!hidden">ng-if fast</div>
+
+  <!-- ng-hide divs -->
+  <div class="slow-fade" ng-init="hidden = false" ng-click="hidden = true" ng-hide="hidden">ng-hide slow</div>
+  <div class="fast-fade" ng-init="hidden = false" ng-click="hidden = true" ng-hide="hidden">ng-hide fast</div>
+
+  <!-- A Gotcha Example --> 
+  <div id="slow-fade" ng-init="hidden = false" ng-click="hidden = true" ng-hide="hidden">Gotcha -- id overwrites transition because of CSS selector heirarchy</div>
+  <button ng-click="hidden = !hidden">Unhide/hide</button>
+
+
+  <div ng-init="makeSmall = false" ng-class="{small: makeSmall===true, big: makeSmall === false}">This is some text, bro</div>
+  <button ng-click="makeSmall = !makeSmall">Big/Small</button>
+</body>
+</html>

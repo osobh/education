@@ -1,0 +1,11 @@
+<nav>
+  <h2>Auth Example</h2>
+  <a href="/">Home</a>
+  <span ng-if="$ctrl.currentUser">
+    Welcome <a ng-href="$ctrl.currentUser">{{$ctrl.currentUser.name}}</a>
+    |
+    <a href="/users">Users</a>
+    |
+    <a href="/logout">Logout</a>
+  </span>
+</nav>

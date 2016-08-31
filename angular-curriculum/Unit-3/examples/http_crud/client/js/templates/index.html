@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="../../css/todo.css">
+<h1>See all the todos!</h1>
+{{todos}}
+<ul>
+  <li ng-repeat="todo in todos">
+    {{todo.task}}
+    <button ng-click="deleteTodo(todo)">X</button>
+    <a ng-href="/todos/{{todo._id}}/edit">Edit this todo</a>
+  </li>
+</ul>
+
+<a href="/todos/new">Create a new todo</a>

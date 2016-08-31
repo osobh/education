@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+  <div class="panel panel-default">
+    <div class="panel-heading"><%= icecream.flavor %></div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-xs-3">
+          <img src="<%= icecream.imageUrl %>">
+        </div>
+        <div class="col-xs-9">
+          <div>
+            <%= icecream.description %>
+          </div>
+          <div class="pull-right">
+            <a href="/icecreams/<%= icecream.id %>/edit" class="btn btn-success">Edit</a>
+            <form action="/icecreams/<%= icecream.id %>?_method=delete" method="POST" class="delete-form">
+              <button role="submit" class="btn btn-danger">Delete</button>
+            </form>
+            <a href="/icecreams" class="btn btn-primary">Go Back</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% include ../partials/footer %>
