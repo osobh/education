@@ -1,0 +1,21 @@
+{
+  "name": "w10-f-bin-and-hex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "prompt.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "difficulty": 6,
+  "keywords": ["algorithms" "arrays" "sorting" "lists" "data" "structures"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^3.5.0"
+  }
+}
+
+
