@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  .row
+    h1 Verify~
+    form(method="POST", action="/verify").form
+      .form-group
+        input(name="code", type="code", placeholder="Verify Code")
+      .form-group
+        input(type="submit").btn.btn-primary
+      br 
+      a(href="/verify/?code=true") Generate a New Verification Code

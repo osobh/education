@@ -1,0 +1,3 @@
+web: bin/www
+worker: node worker.js
+worker2: node verifyworker.js

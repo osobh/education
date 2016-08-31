@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  .row
+    h1 Signup for Reminders~
+    form(method="POST", action="/users/signup").form
+      .form-group
+        input(name="phone", type="phone", placeholder="Phone")
+      .form-group
+        input(name="password", type="password", placeholder="Password")
+      .form-group
+        input(name="verifypassword", type="password", placeholder="Verify Password")
+      .form-group
+        input(type="submit").btn.btn-primary
