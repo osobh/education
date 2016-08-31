@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <a href="{{url_for('posts.new', user_id=current_user.id)}}">Add a new post</a> |
+    <a href="{{url_for('posts.index', user_id=current_user.id)}}">See your posts</a>
+    <h1>See all the posts</h1>
+    {% for post in posts %}
+    <p>
+        USER_ID {{post.user.id}}| Title - {{post.title}} |
+        <a href="{{url_for('posts.show', user_id=post.user.id, id=post.id)}}">Show</a> |
+        <a href="{{url_for('posts.edit', user_id=post.user.id, id=post.id)}}">Edit</a>
+        <form method="POST" action="{{url_for('posts.destroy', user_id=post.user.id, id=post.id)}}?_method=DELETE">
+            <input type="submit" class = "btn btn-xs btn-danger" value="X">
+        </form>
+    </p>
+    {% endfor %}
+{% endblock %}

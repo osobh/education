@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+</head>
+<body>
+    <!-- flash messages -->
+    {% for message in get_flashed_messages() %}
+      {{message}}
+    {% endfor %}
+
+    <!-- errors -->
+    {% if error %}
+      <p class="text-danger"><strong>Error:</strong> {{ error }}</p>
+    {% endif %}
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

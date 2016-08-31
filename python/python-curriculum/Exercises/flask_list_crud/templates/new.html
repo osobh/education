@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Add a new book</h1>
+    <form action="/books" method="POST">
+        <input type="text" name="title" id="">
+        <input type="text" name="author" id="">
+        <input type="submit" value="Add a book">
+    </form>
+{% endblock %}

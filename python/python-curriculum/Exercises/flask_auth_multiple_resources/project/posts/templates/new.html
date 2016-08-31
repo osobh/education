@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Add a new post</h1>
+<br>
+<form method="post" action="{{url_for('posts.create', user_id=user.id)}}">
+  {{ form.csrf_token }}
+  <p>
+    {{ form.title(placeholder="title") }}
+    <span class="text-danger">
+      {% if form.title.errors %}
+        {% for error in form.title.errors %}
+          {{ error }}
+        {% endfor %}
+      {% endif %}
+    </span>
+  </p>
+  <p>
+  {{ form.body(placeholder="body") }}
+    <span class="text-danger">
+      {% if form.body.errors %}
+        {% for error in form.body.errors %}
+          {{ error }}
+        {% endfor %}
+      {% endif %}
+    </span>
+  </p>
+  <button class="btn btn-success" type="submit">Add</button>
+</form>
+{% endblock %}

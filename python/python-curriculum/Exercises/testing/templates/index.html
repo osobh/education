@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for instructor in instructors %}
+        <p>
+            Name: {{instructor}}
+        </p>
+    {% endfor %}
+
+    {% if "Janey" in instructors %}
+        <p>
+            Lucky you!
+        </p>
+    {% else %}
+        <p>
+            Bummer! You're missing out...
+        </p>
+    {% endif %}
+{% endblock %}

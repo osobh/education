@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Edit an existing new post</h1>
+<br>
+<form method="post" action="{{url_for('posts.update', user_id=user.id, id=post.id)}}?_method=PATCH">
+  {{ form.csrf_token }}
+  <p>
+    {{ form.title(placeholder="title", value=post.title)}}
+    <span class="text-danger">
+      {% if form.title.errors %}
+        {% for error in form.title.errors %}
+          {{ error }}
+        {% endfor %}
+      {% endif %}
+    </span>
+  </p>
+  <p>
+  {{ form.body(placeholder="body", value=post.body) }}
+    <span class="text-danger">
+      {% if form.body.errors %}
+        {% for error in form.body.errors %}
+          {{ error }}
+        {% endfor %}
+      {% endif %}
+    </span>
+  </p>
+  <button class="btn btn-warning" type="submit">Edit</button>
+</form>
+{% endblock %}

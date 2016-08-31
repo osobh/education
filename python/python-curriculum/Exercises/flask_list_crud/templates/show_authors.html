@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>See all the Authors</h1>
+    {% for author in authors %}
+    <p>
+        {{author.name}}
+        <a href="{{url_for('show_authors', author_id=author.id)}}">See more</a>
+        <form action="{{url_for('delete_book', id=book.id)}}?_method=DELETE" method="POST">
+            <input type="submit" value="X">
+        </form>
+    </p>
+    {% endfor %}
+{% endblock %}

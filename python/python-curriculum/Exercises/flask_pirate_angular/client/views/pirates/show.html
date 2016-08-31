@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Pirate #{{ vm.pirate.id }}
+    <a href="javascript:void(0)" ng-click="vm.removePirate(vm.pirate.id)">
+      <span class="glyphicon glyphicon-remove pull-right"></span>
+    </a>
+    <a href="/pirates/{{vm.pirate.id}}/edit">
+      <span class="glyphicon glyphicon-pencil pull-right"></span>
+    </a>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-4">
+        <img ng-src="{{vm.pirate.image_url}}" alt="">
+      </div>
+      <div class="col-sm-8">
+        <h2>{{ vm.pirate.name }}</h2>
+        <p>Poison: {{ vm.pirate.poison }}</p>
+        <p>Accessory: {{ vm.pirate.accessory }}</p>
+      </div>
+    </div>
+  </div>
+</div>

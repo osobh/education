@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+
+    <!-- errors -->
+    {% if error %}
+      <p class="text-danger">Error: {{ error }}</p>
+    {% endif %}
+
+    <!-- flash messages -->
+    {% for message in get_flashed_messages() %}
+      {{message}}
+    {% endfor %}
+</body>
+</html>
