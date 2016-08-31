@@ -1,0 +1,23 @@
+{
+  "name": "basic-js-part-2",
+  "version": "1.0.0",
+  "description": "For each of the problems below:",
+  "main": "exercise1.js",
+  "scripts": {
+    "test": "mocha test/jsFunctionsSpec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gSchool/basic-js-part-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gSchool/basic-js-part-2/issues"
+  },
+  "homepage": "https://github.com/gSchool/basic-js-part-2#readme",
+  "devDependencies": {
+    "chai": "^3.4.1"
+  }
+}

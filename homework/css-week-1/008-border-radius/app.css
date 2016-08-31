@@ -1,0 +1,42 @@
+p {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.post {
+  border: 1px solid rgba(000,000,000,0.2);
+  padding: 10px;
+  max-width: 650px;
+}
+
+.post > h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Your Code Goes Under This Line */
+.circle.full {
+    border-radius: 120px/120px;
+    border:solid 113px #000;
+    width:0px;
+    height:0px;
+}
+
+.circle.outline {
+     border-style: solid;
+     border-radius: 50%;
+     border-width: 2px;
+     width:200px;
+     height: 200px;
+    
+}
+
+.post {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px; 
+}

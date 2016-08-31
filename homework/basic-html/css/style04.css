@@ -1,0 +1,53 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+    border: solid black;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+a:hover:not(.active) {
+    background-color: grey;
+}
+
+.active {
+background-color:#4CAF50;
+}
+
+.big-input {
+    width: 25%;
+    height: 30px;
+}
+
+.info-area {
+    margin-left: 87px;
+    margin-bottom: 30px;
+}
+.infoH1 {
+    margin-left: 56px;
+    margin-top: 50px;
+}
+
+.email-area {
+    margin-left: 87px;
+    margin-bottom: 30px;
+}
+
+.single-button {
+    margin-left: 87px;
+    width: 100px;
+    height: 33px;
+}

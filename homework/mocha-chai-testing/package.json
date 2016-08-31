@@ -1,0 +1,27 @@
+{
+  "name": "mocha-chai-testing",
+  "version": "1.0.0",
+  "description": "In script.js you'll find 3 functions which already have implementations. These functions may have errors, they may not. Your objective is to write tests using `Mocha` and `Chai` for each one that can prove they are correct or incorrect.",
+  "main": "script.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^3.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osobh/mocha-chai-testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osobh/mocha-chai-testing/issues"
+  },
+  "homepage": "https://github.com/osobh/mocha-chai-testing#readme"
+}

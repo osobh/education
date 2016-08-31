@@ -1,0 +1,216 @@
+## HTTP Questions
+
+__URLs__
+
+* Name all of the parts of the url that you can remember.  In your own words describe what they do.
+
+Internet Application Protocol ( http, https, ftp, etc) - Sub-domain(www) - DomainName(google) - TopLevelDomain(.com) - Category(/category) - sub-category(/category/apps/) - webpage name(/category/apps/new.html)
+
+* Name the pieces of the following urls:
+	* `https://www.google.com/`
+  protocol - subdomain - domain - TLD
+
+	* `https://workbook.galvanize.com/cohorts/41/learning_experiences/367`
+  protocol - subdomain - domain - TLD - category - subcategory - subcategory - pageID number
+
+	* `http://locahost:5000/animals/puppies?onlycute=1&size=medium#firstpuppy`
+  protocol - domain - port number - category - subcategory - query
+
+	* `https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_Client_Error`
+  protocol - subdomain - domain - TLD - category - subcategoy - error response
+
+* Can a server use more than 1 port?
+yes, 80 and 443
+
+* Why is https different than http?
+https provides an encrypted tunnel for webtraffic to pass through.
+
+* How does a server interpret the following url's query paramter.  What data structure does it create on the server?
+
+```
+http://locahost:5000/animals?puppies=fido&puppies=max&puppies=moxie
+```
+This structure creates a query to the localhost server on port 5000 on the "animals" route, and queries puppies for fido,max,and moxie.
+
+
+__HTTP Request/Response__
+
+* Name at least 4 http verbs
+GET,POST,PUT,DELETE
+
+* What is each verb useful for in your own words
+GET requests information from the server
+POST submits information to a server
+PUT Update the information on a server
+DELETE remove information from a server
+
+* What does idempotent mean?
+
+clients can make that same call repeatedly while producing the same result. In other words, making multiple identical requests has the same effect as making a single request.
+
+* Name the 5 http status code ranges.  What are they used for in general?
+200 OK - responding that a request is true and the resources exist
+300 moved - resouce or request has been moved
+400 - Client error , requesting something that doesn't exist on the server
+500 - Server error, something on the server went sideways.
+
+* If a server returns a http status code of 301 and a location of `https://www.google.com/`, what does the browser do?
+re-directs to the new location of https://www.google.com
+
+* For the following HTTP headers, decide if the following header is used for requests, responses or both:
+	* Accept
+  Request
+
+	* Content-type
+  Response
+	
+  * User-agent
+	Request
+
+  * Set-cookies
+	Response
+  * Cache-control
+	Both
+
+  * Cookie
+  Request
+
+* Is the following a http request or response?  How do you know for each?
+
+This is a response as it provides us with a 200OK and the body included returns us the resource we requested.
+
+```
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Vary: Accept
+Content-Type: text/html; charset=utf-8
+Content-Length: 722
+ETag: W/"2d2-Wu0We9N5g35FXWY+gOATLA"
+Date: Tue, 08 Mar 2016 20:37:11 GMT
+Connection: keep-alive
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>Student Roster</title>
+  </head>
+  <body>
+    <main>
+      <h1>Student Roster</h1>
+      
+        <section>
+          <h3>Daenerys Targaryen</h3>
+          <span>Student Id: nys8fbohl</span>
+          <h4>Hobby: Motherhood</h4>
+          <img src="https://i.imgur.com/KlycRG5.jpg" alt="Daenerys Targaryen" />
+        </section>
+      
+        <section>
+          <h3>Tyrion Lannister</h3>
+          <span>Student Id: njehukbohe</span>
+          <h4>Hobby: Traveling</h4>
+          <img src="https://i.imgur.com/fFMusdC.png" alt="Tyrion Lannister" />
+        </section>
+      
+    </main>
+  </body>
+</html>
+```
+
+This is a Request as we can see we are asking the server to Delete a resource on the server.
+```
+DELETE /students/n1vmyrw3x HTTP/1.1
+Host: g22-students.herokuapp.com
+Accept: application/json
+Cache-Control: no-cache
+Postman-Token: 0041e3c3-efdb-f0c3-b2f4-2d79f6d0f44b
+```
+
+
+--------------------------------------------------------
+
+__JSON__
+
+* Describe what JSON is.  What is it used for.
+ JSON(Javascript Object Notation)is a lightweight data-interchange format.
+
+ JSON is built on two structures:
+
+A collection of name/value pairs. In various languages, this is realized as an object, record, struct, dictionary, hash table, keyed list, or associative array.
+An ordered list of values. In most languages, this is realized as an array, vector, list, or sequence.
+These are universal data structures. Virtually all modern programming languages support them in one form or another. It makes sense that a data format that is interchangeable with programming languages also be based on these structures.
+
+
+* Convert the following map into a javascript object then console log the age.
+
+```
+{ "company" : "Github", "age": 7, "categories" : "Services,Internet,Software"}
+
+{
+  "company": "Github",
+  "age": 7,
+  "categories": "Services,Internet,Software"
+}
+
+console.log(age);
+
+```
+* Convert the following to a javascript object.  Console log each company name.
+
+```
+{ "Companies":[ { "company": "Github", "age": 7, "categories": "Services,Internet,Software"},
+              { "company": "Airbnb", "age": 6, "categories": "Hotels,Travel"},
+              { "company": "Square", "age": 7, "categories": "FinTech,Hardware + Software,Finance"},
+              { "company": "Dropbox", "age": 11, "categories": "Cloud Data Services,Storage,Web Hosting"}
+            ]
+}
+
+{
+  "Companies": [{
+    "company": "Github",
+    "age": 7,
+    "categories": "Services,Internet,Software"
+  }, {
+    "company": "Airbnb",
+    "age": 6,
+    "categories": "Hotels,Travel"
+  }, {
+    "company": "Square",
+    "age": 7,
+    "categories": "FinTech,Hardware + Software,Finance"
+  }, {
+    "company": "Dropbox",
+    "age": 11,
+    "categories": "Cloud Data Services,Storage,Web Hosting"
+  }]
+}
+
+
+
+
+```
+* The following is javascript.  Convert the object to a string and console log it.
+
+console.log(JSON.stringify(myObj));
+
+```
+var myObj = {
+  company: "Galvanize",
+  age: 3,
+  categories: "Education"
+};
+```
+__MISC__
+
+* Describe what DNS is.
+The Domain Name System (DNS) is a hierarchical decentralized naming system for computers, services, or any resource connected to the Internet or a private network. It associates various information with domain names assigned to each of the participating entities.
+
+* In the terminal, type `man curl`.  Look at the man page for curl.  What do the following flags do? `-v`, `-X`.  (Hint: to search for a string, type `/` then the text you want, then enter.  To quit the man page, type `q`).
+
+* What is TCP/IP?  How does it interact with HTTP?
+Transmission Control Protocol (TCP) and the Internet Protocol (IP), HTTP takes care of the communication between a web server and a web browser, TCP/IP handles how the client reaches the server over the network communicating through a numerical addressing system.
+
+* Does HTTP break the data that is being sent into small packets?  If not, what protocol is responsible for it?
+HTTP doesn't break the data down, and that is the Job of TCP/IP to submit packets with certain payload sizes across the network to different endpoints.

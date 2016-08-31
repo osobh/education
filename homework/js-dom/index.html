@@ -1,0 +1,53 @@
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+  <body style="height: auto; background-image: url(http://vignette3.wikia.nocookie.net/harrypotter/images/1/1f/Background.jpg/revision/latest?cb=20120623172432)">
+    <div class="container">
+      <h2 id="bookListTitle"></h2>
+      <div class="row">
+        <div class="col-md-2">
+        <div class="panel panel-default">
+        <div class="panel-heading">Books</div>
+        <div class="panel-body">
+        <ul id="books" style="list-style-type: none; padding: 0px">
+         <!--  "Here's where we add all the content for the books --> 
+        </ul>
+
+        <button type="button" id="addbtn" class="btn btn-primary" style="width: 100%;">Add Book</button>
+
+        <button type="button" id="finishbtn" class="btn btn-danger" style="width: 100%;">Remove Book</button>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-8">
+          <div class="bookListContents panel panel-default">
+          <div class="panel-heading">BookList Contents</div>
+          <div class="panel-body">
+          
+          <div id="book-list" style="list-style-type: none; padding: 0px">
+           <!--  "Here's where we add all the content for the books added to the list. -->
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!--Include your Books List class definitions in a new script tag below -->
+    <script src="booklist.js"></script>
+    <!--Your `driver code` should go below this line, along with your DOM manipulation code -->
+ </body>
+</html>

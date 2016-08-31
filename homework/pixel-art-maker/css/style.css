@@ -1,0 +1,23 @@
+body {
+	background-image: url('bg.jpg');
+}
+
+
+
+.gamediv {
+	background: white;
+	border: 1px solid grey;
+	margin: 1px 1px 1px;
+	width: 2%;
+	height: 4%;
+	float: left;
+}
+
+.colordiv {
+	
+	border: 1px solid grey;
+	margin: 1px 1px 1px;
+	width: 2%;
+	height: 6%;
+	float: left;
+}

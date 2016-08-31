@@ -1,0 +1,10 @@
+body {
+  background-color: #2980b9; 
+  font-family: Tahoma;
+}
+
+#mainmole {
+  height: 400px;
+  width: 400px;
+  background-image: url("http://i.giphy.com/FmNXeuoadNTpe.gif");
+}

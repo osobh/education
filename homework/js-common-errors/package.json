@@ -1,0 +1,19 @@
+{
+  "name": "js-common-errors",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gSchool/js-common-errors.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gSchool/js-common-errors/issues"
+  },
+  "homepage": "https://github.com/gSchool/js-common-errors#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}

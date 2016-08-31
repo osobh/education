@@ -1,0 +1,55 @@
+/* Some CSS must be finished */
+
+html {
+  background-color: #ADE0FF;
+  font-family: Tahoma;
+}
+
+#main-header, #sub-header {
+  text-align: center;
+}
+
+#game-starter {
+  margin: 0 auto;
+  display: table;
+
+ /* Make the game starter button nicer to look at */
+ /* Using your own judegement about "nice" */
+}
+
+/* Make the game-starter button change colors when the mouse 
+   is hovering over it */
+
+#mole-field {
+  width: 278px;
+  height: 278px;
+  margin: 30px auto;
+  background-color: #3498db; /* a grand garden green */
+  background-clip: padding-box;
+  border-radius: 10px;
+  border: 5px solid #136E23; /* a darker green, like hedges */
+}
+
+/* Use the following selectors style moles and mole-holes 
+   HINT: the mole.png file is 62px by 62px */
+#mole-field td {
+  
+}
+
+.mole-hole {
+
+}
+
+/* Make sure every mole appears as the mole.png file in this folder 
+   Bonus points for making the mouse turn into heart.png when the 
+   mouse hovers over a mole! */
+.mole {
+
+}
+
+/* When a mole has been clicked, it's in love.
+   make sure when a mole has been clicked it gets the 
+   foundLove.png as it's background */
+.in-love {
+
+}

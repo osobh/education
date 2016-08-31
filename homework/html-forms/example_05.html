@@ -1,0 +1,78 @@
+<!doctype>
+<html>
+  <head>
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="css/app.css" />
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Example 1</a>
+      <a href="example_02.html">Example 2</a>
+      <a href="example_03.html">Example 3</a>
+      <a href="example_04.html">Example 4</a>
+      <a href="example_05.html">Example 5</a>
+      <a href="example_06.html">Example 6</a>
+    </nav>
+    <h1>Form Fields: Example 5</h1>
+
+    <form action="example_05.html" method="get" >
+    <label for="text">Song Name</label>
+    <input type="text" name="song"  id="sing01" value="Somewhere over the rainbow" placeholder="Somewhere over the rainbow"><br>
+    <br>
+    <label for="email">Songwriter email</label>
+    <input type="email" name="email" placeholder="judy@garlan.net" id="email01"><br>
+    <br>
+    <input type="checkbox" name="check01"  id="input01" placeholder="enter first input"> 
+    <label for="text">Aca-awesome?</label>
+    <br>
+    <input type="checkbox" name="will win regionals"  id="input01" placeholder="enter first input" autofocus checked="true"> 
+    <label for="text">Will win regionals?</label>
+    <br>
+    Slight Diva<input type="radio" name="size" value="1">
+    <input type="radio" name="size" value="2" checked>
+    <input type="radio" name="size" value="3">Extreme Diva<br>
+    <br> 
+
+    <label for="textarea">Comments</label><br>
+    <br>
+    <textarea name="textarea" placeholder="great song love it" id="text01"></textarea><br>
+    <br>
+    <label for="textarea"><i>Super Secret Hidden Field...</i></label><br>
+    <input type="hidden" name="secret-field" value="42">
+    <br>
+    <label for="text">Soloist</label>
+    <select name="Soloist">
+    <option value="57" selected>Mercedes Jones</option>
+    <option value="64">Saab Smith</option>
+    <option value="22">Lexus Nowhere</option>
+    <option value="12">Audiholics Anonymous</option>
+    </select><br>
+    <br>
+    <button type="submit" value="Submit">Success</button>
+    <button type="submit" value="Submit">Canceled</button>
+    <button type="submit" value="Submit">I can <i>haz</i>html</button>
+    </form>
+
+    <div class="query-params">
+      <h2>Query Params</h2>
+      <p>
+        This shows you all of the names and values that
+        have been sent to the server. (<a href="example_05.html">clear</a>)
+      </p>
+      <table>
+        <thead>
+          <tr>
+            
+            <th>Field Name</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+  </body>
+</html>

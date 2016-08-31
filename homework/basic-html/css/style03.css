@@ -1,0 +1,39 @@
+body {
+    background-color: lightblue;
+}
+
+.list-title{
+	margin-top: 100px;
+	margin-left: 40px;
+}
+
+
+.table01 {
+	position: absolute;
+	list-style-type:none;
+	width: 155px;
+	height: 240px;
+	border: solid;
+	padding: 9px 16px;
+	background: #ffffff;
+	left: 30%;
+}
+
+.table02 {
+	position: absolute;
+	list-style-type:none;
+	width: 155px;
+	height: 240px;
+	border: solid;
+	padding: 9px 16px;
+	background: #ffffff;
+	right: 30%;
+
+}
+
+.contact-button{
+	position: absolute;
+	bottom: 100px;
+	left: 46%;
+	
+}
