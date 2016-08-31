@@ -1,0 +1,41 @@
+## An Experiment:
+
+ __Programming concepts I feel I understand very well__.
+
+Networking:
+- Network Protocols (TCP/IP, HTTP/S)
+- Network Architectures
+
+Server-Side Programming:
+- Accessing and Manipulating the local filesystem.
+- Creating or Accessing data can be sent to a client.
+- Rendering views to the client that eminate from the server.
+
+
+Client-Side Programming
+- Choose what parts of the client to manipulate or what services to use for that experience
+- Control different elements of HTML dynamically through Javascript and Jquery
+- Render responsive CSS to add reactive beauty to a client page.
+
+
+API's and Authentication
+- What API's are and how they benefit our software development
+- Startup an API endpoint that will capture some type of data and display it back to the end-user.
+- Startup a service whose routes will first do some processing and logic, then render a view/s for a client.
+- Tie routing up with other services to do additional processing and offer more robust features.
+- Create my own way to check to see if users and their passwords match before sending them to consume a service i've created.
+- Leverage 3rd party providers as methods of additionally checking to see if users are who they claim to be before consuming a services.
+
+#### Take a short break, then:
+
+On my Horizon:
+
+Complex Network Architectures (Multi-Peer Dynamic Mesh Network Topology) in conjuncion with web-protocols. 
+AKA how can I deploy my own private internet with a dynamic network topology architecture and use the same protocols that we have today within.
+
+How to integrate IT architectures and applications 
+
+
+#### Final Summary:
+Some of the thoughts that have come up during the creation of the final summary and with the review of my peer, I have been able to look at the different parts of the horizon goals with a new view. Security and verification are paramount when it comes to being able to share parts of your filesystems and storage space.
+
